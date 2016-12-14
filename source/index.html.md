@@ -6,12 +6,14 @@ language_tabs:
   - ruby
   - python
   - javascript
+  - erlang
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
   - <a href='https://github.com/tripit/slate'>Documentation Powered by Slate</a>
 
 includes:
+  - geocode/geocode
   - errors
 
 search: true
@@ -38,7 +40,7 @@ api = Kittn::APIClient.authorize!('meowmeowmeow')
 ```python
 import kittn
 
-api = kittn.authorize('meowmeowmeow')
+api = kittn.authorize('meowmeowmeow') nesto sasvim novo
 ```
 
 ```shell
@@ -51,6 +53,12 @@ curl "api_endpoint_here"
 const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
+```
+
+```erlang
+nestoSasvimNovo();
+
+a sada spektakl
 ```
 
 > Make sure to replace `meowmeowmeow` with your API key.
@@ -93,6 +101,12 @@ const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
 let kittens = api.kittens.get();
+```
+
+```erlang
+nestoSasvimNovo();
+
+a sada spektakl
 ```
 
 > The above command returns JSON structured like this:
@@ -159,6 +173,12 @@ const kittn = require('kittn');
 
 let api = kittn.authorize('meowmeowmeow');
 let max = api.kittens.get(2);
+```
+
+```erlang
+nestoSasvimNovo();
+
+a sada spektakl
 ```
 
 > The above command returns JSON structured like this:
