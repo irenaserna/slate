@@ -1,5 +1,7 @@
 # Errors
 
+This is a list of Hypertext Transfer Protocol (HTTP) response status codes. 
+
 <aside class="notice">The GEoBuffer API uses the following error codes:</aside>
 
 
@@ -16,3 +18,20 @@ Error Code | Meaning | Explanation
 429 | Too Many Requests | The user has sent too many requests in a given amount of time. Intended for use with rate-limiting schemes. 
 500 | Internal Server Error | A generic error message, given when an unexpected condition was encountered and no more specific message is suitable. 
 503 | Service Unavailable | The server is currently unavailable (because it is overloaded or down for maintenance). Generally, this is a temporary state.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

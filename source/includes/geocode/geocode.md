@@ -1,28 +1,30 @@
 # Geocode
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor, tellus in laoreet ornare, libero metus sagittis dolor, et tempor est ipsum quis mi. Pellentesque congue urna id tempus placerat. Sed interdum eros massa, ac mollis nibh finibus id. Sed vestibulum turpis et orci mattis aliquet. Proin fringilla lorem nec lorem mollis ornare. Mauris bibendum semper ultrices. Duis ac iaculis purus, in fermentum lorem.
 
-> GET
+>GET 
+Example request:
 
 ```shell
-http://geocoder.socialexplorer.com/search
+GET
+> Example request:
+http://geocoder.socialexplorer.com/search?format=xml&bounded=0&limit=4&viewbox=40.944704,40.941397,-73.843510,-73.84024&boundingBox=0&geometry=0&query=50 Avenue NY
 ```
 ```ruby
-http://geocoder.socialexplorer.com/search
+Example request:
 ```
 ```python
-http://geocoder.socialexplorer.com/search
+Example request:
 ```
 ```php
-http://geocoder.socialexplorer.com/search
+Example request:
 ```
 ```go
-http://geocoder.socialexplorer.com/search
+Example request:
 ```
 
-> GeoCode example request:
-
 ```shell
-http://geocoder.socialexplorer.com/search?format=xml&bounded=0&limit=4&viewbox=40.944704,40.941397,-73.843510,-73.84024&boundingBox=0&geometry=0&query=50 Avenue NY
+
 ```
 
 ```ruby
@@ -157,8 +159,6 @@ func main() {
 
 
 > Make sure to replace `meowmeowmeow` with your API key.
-
-All results are in Well-Known Text form. Read more [here](https://en.wikipedia.org/wiki/Well-known_text).
 
 ***
 

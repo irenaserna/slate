@@ -14,8 +14,13 @@ toc_footers:
 includes:
   - introduction/introduction
   - introduction/aboutGeoBuffer
+  - introduction/readingDocs
   - authentication/authentication
   - geocode/geocode
+  - import/imports
+  - import/create-upload-url
+  - import/complete-upload
+  - export/export
   - errors
 
 search: true
