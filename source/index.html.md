@@ -21,6 +21,8 @@ includes:
   - import/create-upload-url
   - import/complete-upload
   - export/export
+  - datasets/datasets
+  - datasets/delete
   - errors
 
 search: true

@@ -1,23 +1,28 @@
-## Create upload URL
+## Create an upload URL
 
 ####POST
 
-`https://dev-datahub.socialexplorer.com/geobuffer/dataset/create-upload-url`
-
-### REQUEST
+`/dataset/create-upload-url`
 
 > REQUEST BODY EXAMPLE
 
 ```
 {
-  "jobType": 5,
-  "ownerId": 1,
-  "fileName": "states.zip",
-  "contentType": "application/zip",
-  "tags": "['tag1', 'tag2']",
-  "createTagsFromFolders": "true if every folder name in the file path should be a tag. false by default"
+  "jobType": 13,
+  "ownerId": 226,
+  "fileName": "Kanton_disem-Drawing.zip",
+  "contentType": "application/x-zip-compressed",
+  "collectionsUuids": [],
+  "ignoredFiles": [],
+  "sourceProjectionForFile": {
+    "Kanton_disem Drawing/Kanton_disem-Drawing.shp":"EPSG:4326"
+  },
+  "encodingForFile":{}
 }
 ```
+
+
+### REQUEST
 
 > SAMPLE REQUEST
 
@@ -142,14 +147,14 @@ The request body is a JSON object containing the following properties:
 | Name                    | Type     | Required | Description    | Default value    | Allowed values |
 |-------------------------|----------|----------|----------------|------------------|----------------|
 | jobType                 |  Integer |   true   | No description | No default value |       13       |
-| ownerId                 |  Integer |   true   | No description | No default value |    Any value   |
-| fileName                |  String  |   true   | No description | No default value |    Any value   |
-| contentType             |  String  |   true   | No description | No default value |    Any value   |
-| sourceProjectionForFile |   Hash   |   false  | No description | No default value |    Any value   |
-| encodingForFile         |   Hash   |   false  | No description | No default value |    Any value   |
-| sourceProjection        |  String  |   false  | No description | No default value |    Any value   |
-| collectionsUuids        | [String] |   false  | No description | No default value |    Any value   |
-| ignoredFiles            | [String] |   false  | No description | No default value |    Any value   |
+| ownerId                 |  Integer |   true   | Unique ID of the job owner  | No default value |    Any value   |
+| fileName                |  String  |   true   | Name of a file | No default value |    Any value   |
+| contentType             |  String  |   true   | Entity header used to indicate the media type of the resource | No default value |    Any value   |
+| sourceProjectionForFile |   Hash   |   false  | Defined shp file with projection type | No default value |    Any value   |
+| encodingForFile         |   Hash   |   false  | Type of encoding | No default value |    Any value   |
+| sourceProjection        |  String  |   false  | Projection type of the source | No default value |    Any value   |
+| collectionsUuids        | [String] |   false  | Unique collections identifier | No default value |    Any value   |
+| ignoredFiles            | [String] |   false  | List of ignored file to upload | No default value |    Any value   |
 
 
 ### RESPONSE
@@ -166,12 +171,11 @@ The request body is a JSON object containing the following properties:
 
 ####RESPONSE PARAMETERS
 
-| Status code | Description           | Body       |
-|-------------|-----------------------|------------|
-| 200         |           Ok          | Body       |
-| 400         |      Bad request      | Body       |
-| 403         |  User not authorized  | Body       |
-| 500         | Internal server error | Body       |
+| Parameter | Description           |
+|-------------|-----------------------|
+| jobId         |     The unique identifier of the created job               |
+| url         |      HTTPS URL of the AmazonS3 staging bucket to transfer your file to|
+| signedUrl         |  HTTPS URL of the AmazonS3 staging bucket to transfer your file to|
 
 Response incude URL which is already encoded, so there is no need to be encoded again.
 

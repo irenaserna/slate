@@ -68,13 +68,13 @@
 }
 ```
 
-###POST /dataset/export
+###POST
+
+`/dataset/export`
+
+
 
 Exports one or more datasets as per export specifications
-
-<aside class="notice">https://dev-datahub.socialexplorer.com/geobuffer/dataset/export</aside>
-
-
 
 ###MANDATORY HEADER
 
@@ -196,11 +196,13 @@ func main() {
 
 ###BODY PARAMETERS
 
+The request body is a JSON object containing the following properties.
+
 | Name                                  | Type      | Required  | Description                   | Default value     | Allowed values            |
 |-----------------------------------    |--------   |:--------: |-----------------------------  |---------------    |-------------------------- |
-| exportSpecifications                  | Array     |   true    | Array export specifications   |       -           |             -             |
-| --> exportSpecifications[datasetUuid]     | String    |   true    |              -                |       -           |             -             |
-| --> exportSpecifications[format]          | String    |   true    |              -                |       -           | "shp" "kml" "geojson" "csv"  |
+| exportSpecifications                  | Array     |   true    | Array export specifications; Collection of datasets   |       -           |             -             |
+| --> exportSpecifications[datasetUuid]     | String    |   true    |              The unique identifier of the specified dataset                |       -           |             -             |
+| --> exportSpecifications[format]          | String    |   true    |              Format of the specified dataset               |       -           | "shp" "kml" "geojson" "csv"  |
 
 > SAMPLE RESPONSE
 

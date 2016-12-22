@@ -52,7 +52,7 @@ html, body {
     linear-gradient(to top, rgba(#000, 0.2), rgba(#000, 0) 8px),
     linear-gradient(to bottom, rgba($nav-embossed-border-top, 1), rgba($nav-embossed-border-top, 0) 1.5px),
     linear-gradient(to top, rgba($nav-embossed-border-bottom, 1), rgba($nav-embossed-border-bottom, 0) 1.5px),
-    #424242;
+    $nav-bg;
 }
 
 .tocify-wrapper {
@@ -66,7 +66,7 @@ html, body {
   left: 0;
   bottom: 0;
   width: $nav-width;
-  background-color: #424242;
+  background-color: $nav-bg;
   font-size: 13px;
   font-weight: bold;
 
@@ -173,9 +173,9 @@ html, body {
 
   // This is the currently selected ToC entry
   .tocify-focus {
-    box-shadow: 0px 1px 0px $nav-active-shadow;
-    background-color: $nav-active-bg;
-    color: $nav-active-text;
+    //box-shadow: 0px 1px 0px $nav-active-shadow;
+    //background-color: $nav-active-bg;
+    color: $nav-active-link;
   }
 
   // Subheaders are the submenus that slide open
@@ -396,7 +396,7 @@ html, body {
   }
 
   h4, h5, h6 {
-    font-size: 10px;
+    font-size: 14px;
   }
 
   hr {
@@ -456,8 +456,9 @@ html, body {
 
   code {
     background-color: rgba(0,0,0,0.05);
-    padding: 3px;
     border-radius: 3px;
+    padding: 12px;
+    font-weight: bold;
     @extend %break-words;
     @extend %code-font;
   }
@@ -624,12 +625,4 @@ html, body {
 
 .highlight, .highlight .w {
   background-color: $code-bg;
-}
-
-pre.highlight {
-  background: #FF0000;
-}
-
-.highlight code {
-  background: #FF00FF;
 }
