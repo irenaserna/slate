@@ -21,6 +21,10 @@ includes:
   - import/create-upload-url
   - import/complete-upload
   - export/export
+  - datasets/datasets
+  - datasets/datasetUID
+  - datasets/delete
+  - datasets/editCell
   - errors
 
 search: true
