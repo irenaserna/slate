@@ -1,26 +1,5 @@
 # Authentication
 
-> To authorize, use this code:
-
-```ruby
-require 'kittn'
-
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-```
-
-```python
-import kittn
-
-api = kittn.authorize('meowmeowmeow') nesto sasvim novo
-```
-
-```shell
-# With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
-```
-
-> Make sure to replace `meowmeowmeow` with your API key.
 
 Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
 
@@ -35,4 +14,9 @@ You must replace <code>meowmeowmeow</code> with your personal API key.
 
 <aside class="success">
 Remember — a happy kitten is an authenticated kitten!
+</aside>
+
+
+<aside class="warning">
+Warning example
 </aside>

@@ -340,8 +340,12 @@ html, body {
     box-sizing: border-box;
     display: block;
     text-shadow: $main-embossed-text-shadow;
-
     @extend %left-col;
+  }
+
+  &>p {
+    margin-top: $code-annotation-padding;
+    margin-bottom: $code-annotation-padding;
   }
 
   &>ul, &>ol {
@@ -360,6 +364,7 @@ html, body {
     padding-bottom: 0.5em;
     border-bottom: 1px solid #ccc;
     margin-bottom: $h1-margin-bottom;
+    margin-bottom: 0px;
     margin-top: 2em;
     border-top: 1px solid #ddd;
     background-image: linear-gradient(to bottom, #fff, #f9f9f9);
@@ -525,7 +530,7 @@ html, body {
     background-color: $code-bg;
     color: #fff;
 
-    padding: 2em $main-padding;
+    padding: 1em $main-padding;
     margin: 0;
     width: $examples-width;
 
@@ -533,7 +538,8 @@ html, body {
     clear:right;
 
     box-sizing: border-box;
-    text-shadow: 0px 1px 2px rgba(0,0,0,0.4);
+    // text-shadow: 0px 1px 2px rgba(0,0,0,0.4);
+    text-shadow: 0px 1px 2px rgba(0,0,0,1);
 
     @extend %right-col;
 
@@ -548,17 +554,23 @@ html, body {
 
   pre {
     @extend %code-font;
+    padding-top: 0;
   }
 
   blockquote {
     &>p {
-      background-color: $code-annotation-bg;
-      border-radius: 5px;
-      padding: $code-annotation-padding;
-      color: #ccc;
-      border-top: 1px solid #000;
-      border-bottom: 1px solid #404040;
+      color: #CCC;
+      text-transform: uppercase;
+//      background-color: $code-annotation-bg;
+//      border-radius: 5px;
+//      padding: $code-annotation-padding;
+//      border-top: 1px solid #000;
+//      border-bottom: 1px solid #404040;
     }
+  }
+
+  p {
+    margin-top: $nav-padding;
   }
 }
 
@@ -616,20 +628,4 @@ html, body {
   %right-col + %left-col {
     margin-top: $main-padding;
   }
-}
-
-.highlight .c, .highlight .cm, .highlight .c1, .highlight .cs {
-  color: #909090;
-}
-
-.highlight, .highlight .w {
-  background-color: $code-bg;
-}
-
-pre.highlight {
-  background: #FF0000;
-}
-
-.highlight code {
-  background: #FF00FF;
 }
