@@ -83,7 +83,7 @@ Exports one or more datasets as per export specifications
 |---------------|------------------|
 
 
-> **SAMPLE REQUEST**
+> SAMPLE REQUEST
 
 ```shell
 curl --request POST \
