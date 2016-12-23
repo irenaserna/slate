@@ -1,30 +1,9 @@
 # Geocode
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor, tellus in laoreet ornare, libero metus sagittis dolor, et tempor est ipsum quis mi. Pellentesque congue urna id tempus placerat. Sed interdum eros massa, ac mollis nibh finibus id. Sed vestibulum turpis et orci mattis aliquet. Proin fringilla lorem nec lorem mollis ornare. Mauris bibendum semper ultrices. Duis ac iaculis purus, in fermentum lorem.
-
->GET 
-Example request:
+> Request example
 
 ```shell
-GET
-> Example request:
 http://geocoder.socialexplorer.com/search?format=xml&bounded=0&limit=4&viewbox=40.944704,40.941397,-73.843510,-73.84024&boundingBox=0&geometry=0&query=50 Avenue NY
-```
-```ruby
-Example request:
-```
-```python
-Example request:
-```
-```php
-Example request:
-```
-```go
-Example request:
-```
-
-```shell
-
 ```
 
 ```ruby
@@ -108,9 +87,9 @@ func main() {
 }
 ```
 
-> Results:
+> Response example
 
-```shell
+```
 <results query="50 Avenue NY" time="2016/12/14 15:15:35">
     <result value="50 Avenue, Hudson, NY 12534" id="road_3709861_50" type="road" point="POINT (-73.74201099999999 42.312731)"/>
     <result value="Avenue, Oneida County, NY" id="road_3773513" type="road" point="POINT (-75.378239 42.939237)"/>
@@ -119,50 +98,9 @@ func main() {
 </results>
 ```
 
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam auctor, tellus in laoreet ornare, libero metus sagittis dolor, et tempor est ipsum quis mi. Pellentesque congue urna id tempus placerat. Sed interdum eros massa, ac mollis nibh finibus id. Sed vestibulum turpis et orci mattis aliquet. Proin fringilla lorem nec lorem mollis ornare. Mauris bibendum semper ultrices. Duis ac iaculis purus, in fermentum lorem.
 
-```ruby
-<results query="50 Avenue NY" time="2016/12/14 15:15:35">
-    <result value="50 Avenue, Hudson, NY 12534" id="road_3709861_50" type="road" point="POINT (-73.74201099999999 42.312731)"/>
-    <result value="Avenue, Oneida County, NY" id="road_3773513" type="road" point="POINT (-75.378239 42.939237)"/>
-    <result value="50 Ave A, New York, NY 10009" id="road_3769563_50" type="road" point="POINT (-73.98502942857142 40.72400328571428)"/>
-    <result value="50 Ave A, Ny, NY 10009" id="road_3769563_usps_7420_50" type="road" point="POINT (-73.98502942857142 40.72400328571428)"/>
-</results>
-```
-
-```python
-<results query="50 Avenue NY" time="2016/12/14 15:15:35">
-    <result value="50 Avenue, Hudson, NY 12534" id="road_3709861_50" type="road" point="POINT (-73.74201099999999 42.312731)"/>
-    <result value="Avenue, Oneida County, NY" id="road_3773513" type="road" point="POINT (-75.378239 42.939237)"/>
-    <result value="50 Ave A, New York, NY 10009" id="road_3769563_50" type="road" point="POINT (-73.98502942857142 40.72400328571428)"/>
-    <result value="50 Ave A, Ny, NY 10009" id="road_3769563_usps_7420_50" type="road" point="POINT (-73.98502942857142 40.72400328571428)"/>
-</results>
-```
-
-
-```php
-<results query="50 Avenue NY" time="2016/12/14 15:15:35">
-    <result value="50 Avenue, Hudson, NY 12534" id="road_3709861_50" type="road" point="POINT (-73.74201099999999 42.312731)"/>
-    <result value="Avenue, Oneida County, NY" id="road_3773513" type="road" point="POINT (-75.378239 42.939237)"/>
-    <result value="50 Ave A, New York, NY 10009" id="road_3769563_50" type="road" point="POINT (-73.98502942857142 40.72400328571428)"/>
-    <result value="50 Ave A, Ny, NY 10009" id="road_3769563_usps_7420_50" type="road" point="POINT (-73.98502942857142 40.72400328571428)"/>
-</results>
-```
-
-```go
-<results query="50 Avenue NY" time="2016/12/14 15:15:35">
-    <result value="50 Avenue, Hudson, NY 12534" id="road_3709861_50" type="road" point="POINT (-73.74201099999999 42.312731)"/>
-    <result value="Avenue, Oneida County, NY" id="road_3773513" type="road" point="POINT (-75.378239 42.939237)"/>
-    <result value="50 Ave A, New York, NY 10009" id="road_3769563_50" type="road" point="POINT (-73.98502942857142 40.72400328571428)"/>
-    <result value="50 Ave A, Ny, NY 10009" id="road_3769563_usps_7420_50" type="road" point="POINT (-73.98502942857142 40.72400328571428)"/>
-</results>
-```
-
-
-> Make sure to replace `meowmeowmeow` with your API key.
-
-***
-
-**Parameters:**
+### Parameters
 
 
 | ATTRIBUTE   | DESCRIPTION                                                      |
@@ -175,7 +113,6 @@ func main() {
 | geometry    | Return geometry as WKT [1&#124;0] - optional, default is 0            |
 | boundingBox | Return the bounding box [1&#124;0] - optional, default is 0           |
 
-___
 
 **As a response you can get various element types**
 
